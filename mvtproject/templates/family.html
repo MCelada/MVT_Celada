@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Listado de Familiares
+    </h1>
+
+    {% for list_family in list %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">El Familiar: {{list_family.name}} {{list_family.last_name}}</h5>
+        <p class="card-text">Parentesco: {{list_family.relationship}} . Vive? {{list_family.it_lives}}</p>
+
+        <p>Su numero de telefono es: {{list_family.number}}</p>
+        </div>
+    </div>
+{% endfor %}
+</body>
+</html>
